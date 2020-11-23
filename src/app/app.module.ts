@@ -1,13 +1,25 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { FormsModule } from "@angular/forms";
 
-import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
+import { AppComponent } from "./app.component";
+import { TimerComponent } from "./timer/timer.component";
+import { TimerService } from "./services/timer.service";
+import { PlayerListComponent } from "./player-list/player-list.component";
+import { PlayerComponent } from "./player-list/player/player.component";
+import { PlayerService } from "./services/player.service";
+import { RemovePlayerDirective } from "./directive/remove-player.directive";
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  imports: [BrowserModule, FormsModule],
+  declarations: [
+    AppComponent,
+    TimerComponent,
+    PlayerListComponent,
+    PlayerComponent,
+    RemovePlayerDirective
+  ],
+  bootstrap: [AppComponent],
+  providers: [TimerService, PlayerService]
 })
-export class AppModule { }
+export class AppModule {}
