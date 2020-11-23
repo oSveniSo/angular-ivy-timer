@@ -8,7 +8,6 @@ import { TimerService } from "./services/timer.service";
 import { PlayerListComponent } from "./player-list/player-list.component";
 import { PlayerComponent } from "./player-list/player/player.component";
 import { PlayerService } from "./services/player.service";
-import { RemovePlayerDirective } from "./directive/remove-player.directive";
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -16,8 +15,7 @@ import { RemovePlayerDirective } from "./directive/remove-player.directive";
     AppComponent,
     TimerComponent,
     PlayerListComponent,
-    PlayerComponent,
-    RemovePlayerDirective
+    PlayerComponent
   ],
   bootstrap: [AppComponent],
   providers: [TimerService, PlayerService]
