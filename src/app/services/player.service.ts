@@ -9,12 +9,14 @@ export class PlayerService {
   constructor() {}
 
   public addPlayer(player: Player) {
+    if (!player) return;
     const tmpList = this.playersSubject.value;
     tmpList.push(player);
     this.playersSubject.next(tmpList);
   }
 
   public removePlayer(player: Player) {
+    if (!player) return;
     const tmpList = this.playersSubject.value.filter(p => p !== player);
     this.playersSubject.next(tmpList);
   }
