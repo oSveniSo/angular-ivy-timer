@@ -10,6 +10,7 @@ import { PlayerComponent } from "./player-list/player/player.component";
 import { PlayerService } from "./services/player.service";
 import { AddPlayerDirective } from "./directives/add-player.directive";
 import { RemovePlayerDirective } from "./directives/remove-player.directive";
+import { NumberToTimePipe } from "./pipes/number-to-time.pipe";
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -19,7 +20,8 @@ import { RemovePlayerDirective } from "./directives/remove-player.directive";
     PlayerListComponent,
     PlayerComponent,
     AddPlayerDirective,
-    RemovePlayerDirective
+    RemovePlayerDirective,
+    NumberToTimePipe
   ],
   bootstrap: [AppComponent],
   providers: [TimerService, PlayerService]

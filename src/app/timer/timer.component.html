@@ -1,0 +1,8 @@
+<button (click)="startTimer()">Start</button>
+<button (click)="resetTimer()">Reset</button>
+<ng-container *ngIf="!!timerTime">
+  <div class="counter-bar bg-red">
+    <div class="bg-green" [style.width]="timeInPercent">&nbsp;</div>
+    <span>{{timerTime.currentTime | numberToTime}}</span>
+  </div>
+</ng-container>
